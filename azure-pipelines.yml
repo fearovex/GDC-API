@@ -20,7 +20,7 @@ steps:
 - task: UseDotNet@2
   inputs:
     packageType: 'sdk'
-    version: '8.x.x'  
+    version: '8.0.302'  
     installationPath: $(Agent.ToolsDirectory)/dotnet
 - task: NuGetToolInstaller@1
 
