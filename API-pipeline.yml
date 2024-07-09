@@ -36,3 +36,17 @@ stages:
               command: "publish"
               publishWebProjects: true
               arguments: "-o $(Build.ArtifactStagingDirectory)"
+
+          - task: PublishPipelineArtifact@1
+            displayName: Publish Artifacts ADO - Website
+            inputs:
+              targetPath: "$(Build.ArtifactStagingDirectory)"
+              artifact: "Website"
+              publishLocation: "pipeline"
+
+          - task: PublishPipelineArtifact@1
+            displayName: Publish Artifacts ADO - Bicep
+            inputs:
+              targetPath: "$(Build.SourcesDirectory)/infra/webapp.bicep"
+              artifact: "Bicep"
+              publishLocation: "pipeline"
