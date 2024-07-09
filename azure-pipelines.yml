@@ -7,23 +7,14 @@ trigger:
 - main
 
 pool:
-  name: GDC-API-pool
-  demands:
-    - Agent.name -equals GDC-API-vm0
+  vmImage: 'windows-latest'
 
 variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  MSBuildSDKsPath: 'C:\Program Files\dotnet\sdk\8.0.302\Sdks'
 
 steps:
-- task: UseDotNet@2
-  inputs:
-    packageType: 'sdk'
-    version: '8.0.302'  
-    installationPath: $(Agent.ToolsDirectory)/dotnet
-
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
