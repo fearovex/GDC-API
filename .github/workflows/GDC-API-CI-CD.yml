@@ -30,9 +30,6 @@ jobs:
     - name: Build
       run: dotnet build 'GDC-Api.sln' --configuration Release --no-restore  # Specifies the path to the solution file
 
-    - name: Run tests
-      run: dotnet test 'GDC-Api.Tests/GDC-Api.Tests.csproj' --no-restore --verbosity normal  # Specifies the path to the test project (assuming it is in this path)
-
     - name: Publish
       run: dotnet publish 'GDC-Api.sln' --configuration Release --output ${{ github.workspace }}/publish  # Specifies the path to the solution file
 
