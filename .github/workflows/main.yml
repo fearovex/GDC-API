@@ -16,8 +16,8 @@ jobs:
             - name: deploy
               uses: azure/arm-deploy@v1
               with:
-                  subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
-                  resourceGroupName: ${{ secrets.AZURE_RG }}
+                  subscriptionId: 00866556-f294-4323-9a1e-a48d2d33f665
+                  resourceGroupName: Github-RG
                   template: ./main.bicep
                   parameters: storagePrefix=stg-github
                   failOnStdErr: false
