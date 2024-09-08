@@ -19,5 +19,5 @@ jobs:
                   subscriptionId: 00866556-f294-4323-9a1e-a48d2d33f665
                   resourceGroupName: 'Bicep'
                   template: ./main.bicep
-                  parameters: storageName=stg-github
+                  parameters: storageName=stggithub123
                   failOnStdErr: false
